@@ -21,7 +21,7 @@ a profile, education, skills, experience/projects, and contact information.
 ├── style.css          # Page styling
 ├── script.js          # Small reveal-on-scroll effect
 ├── assets/
-│   └── CARPENTETRO, EF.png   # Profile photo
+│   └── CARPENTETRO, EF.webp  # Profile photo (WebP, converted from PNG for faster loading)
 └── README.md          # This file
 ```
 
