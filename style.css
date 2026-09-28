@@ -1,13 +1,13 @@
 :root {
-  --bg: #0c0d16;
-  --bg-alt: #12131f;
-  --surface: rgba(255, 255, 255, 0.04);
-  --surface-border: rgba(255, 255, 255, 0.08);
-  --text: #f2f1f7;
-  --text-muted: #a7a9bd;
-  --accent: #8b6bf2;
-  --accent-2: #b79cff;
-  --accent-soft: rgba(139, 107, 242, 0.16);
+  --bg: #f7fafc;
+  --bg-alt: #ffffff;
+  --surface: rgba(30, 58, 95, 0.035);
+  --surface-border: rgba(30, 58, 95, 0.12);
+  --text: #1e2a3a;
+  --text-muted: #5b6b80;
+  --accent: #5b8fc7;
+  --accent-2: #3f6f9e;
+  --accent-soft: rgba(91, 143, 199, 0.12);
   --radius-lg: 28px;
   --radius-md: 18px;
   --radius-sm: 12px;
@@ -59,7 +59,7 @@ a {
   height: 480px;
   top: -180px;
   right: -160px;
-  background: radial-gradient(circle, rgba(139, 107, 242, 0.35), transparent 70%);
+  background: radial-gradient(circle, rgba(91, 143, 199, 0.16), transparent 70%);
 }
 
 .bg-glow--bottom {
@@ -67,7 +67,7 @@ a {
   height: 520px;
   bottom: -220px;
   left: -180px;
-  background: radial-gradient(circle, rgba(90, 70, 170, 0.28), transparent 70%);
+  background: radial-gradient(circle, rgba(63, 111, 158, 0.12), transparent 70%);
 }
 
 .bg-line {
@@ -81,7 +81,7 @@ a {
 
 .bg-line path {
   fill: none;
-  stroke: var(--accent-2);
+  stroke: var(--accent);
   stroke-width: 1;
 }
 
@@ -163,7 +163,7 @@ a {
   gap: 0.45rem;
   padding: 0.5rem 0.9rem;
   border-radius: 999px;
-  background: var(--surface);
+  background: var(--bg-alt);
   border: 1px solid var(--surface-border);
   color: var(--text-muted);
   font-size: 0.85rem;
@@ -179,6 +179,7 @@ a {
 
 .chip-icon {
   font-size: 0.9rem;
+  color: var(--accent-2);
 }
 
 .hero-photo {
@@ -193,8 +194,8 @@ a {
   width: 88%;
   height: 92%;
   border-radius: 46% 54% 60% 40% / 50% 45% 55% 50%;
-  background: linear-gradient(160deg, var(--accent) 0%, #4a3a8f 55%, transparent 100%);
-  opacity: 0.55;
+  background: linear-gradient(160deg, var(--accent) 0%, #cfe2f3 55%, transparent 100%);
+  opacity: 0.35;
   filter: blur(2px);
   z-index: 0;
 }
@@ -207,8 +208,8 @@ a {
   aspect-ratio: 3 / 4;
   object-fit: cover;
   border-radius: 42% 58% 62% 38% / 52% 48% 52% 48%;
-  border: 3px solid rgba(255, 255, 255, 0.15);
-  box-shadow: 0 25px 60px rgba(0, 0, 0, 0.45);
+  border: 3px solid #ffffff;
+  box-shadow: 0 16px 40px rgba(30, 58, 95, 0.14);
 }
 
 /* ---------- layout helpers ---------- */
@@ -227,20 +228,21 @@ main {
 }
 
 .panel {
-  background: var(--surface);
+  background: var(--bg-alt);
   border: 1px solid var(--surface-border);
   border-radius: var(--radius-lg);
   padding: 2rem;
+  box-shadow: 0 1px 3px rgba(30, 58, 95, 0.05);
 }
 
 .panel--accent {
-  background: linear-gradient(160deg, rgba(139, 107, 242, 0.22), rgba(139, 107, 242, 0.05));
-  border-color: rgba(139, 107, 242, 0.3);
+  background: linear-gradient(160deg, rgba(91, 143, 199, 0.08), rgba(91, 143, 199, 0.02));
+  border-color: rgba(91, 143, 199, 0.25);
 }
 
 .panel--contact {
-  background: linear-gradient(135deg, rgba(139, 107, 242, 0.28), rgba(60, 45, 110, 0.12));
-  border-color: rgba(139, 107, 242, 0.35);
+  background: linear-gradient(135deg, rgba(91, 143, 199, 0.1), rgba(91, 143, 199, 0.02));
+  border-color: rgba(91, 143, 199, 0.25);
 }
 
 .panel h2 {
@@ -326,15 +328,15 @@ main {
   font-size: 0.75rem;
   padding: 0.3rem 0.65rem;
   border-radius: 999px;
-  background: rgba(255, 255, 255, 0.07);
-  border: 1px solid var(--surface-border);
-  color: var(--text-muted);
+  background: var(--accent-soft);
+  border: 1px solid rgba(91, 143, 199, 0.22);
+  color: var(--accent-2);
 }
 
 .cert-note {
   margin-top: 1.5rem;
   padding-top: 1.2rem;
-  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  border-top: 1px solid var(--surface-border);
   font-size: 0.85rem;
   color: var(--text-muted);
 }
@@ -376,6 +378,7 @@ main {
 .contact-list a {
   text-decoration: none;
   font-weight: 600;
+  color: var(--accent-2);
 }
 
 .contact-list a:hover {
