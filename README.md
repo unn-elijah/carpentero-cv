@@ -23,4 +23,8 @@ Open `index.html` in a modern browser. Tailwind utilities load from jsDelivr, so
 
 ## Deployment
 
-Deploy this static site from the repository root with Vercel. The public Vercel URL will be added here after deployment is connected and verified.
+Visit the CV page in:
+https://carpentero-cv.vercel.app/
+
+Visit Github Repo here:
+https://github.com/unn-elijah/carpentero-cv
