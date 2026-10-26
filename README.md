@@ -5,7 +5,8 @@ A responsive personal CV and portfolio website for internship, OJT, freelance, a
 ## Technologies
 
 - HTML5
-- CSS3 (responsive layouts, transitions, reduced-motion support)
+- Tailwind CSS 4 (responsive utility classes via the browser CDN)
+- CSS3 (site styling, transitions, reduced-motion support)
 - Vanilla JavaScript (scroll reveal)
 
 ## Sections
@@ -18,7 +19,7 @@ Eljah Fiona P. Carpentero — BSIT 4th Year, Davao Del Norte State College
 
 ## Run locally
 
-Open `index.html` in a modern browser. No build step is required.
+Open `index.html` in a modern browser. Tailwind utilities load from jsDelivr, so an internet connection is needed for those classes. No build step is required.
 
 ## Deployment
 

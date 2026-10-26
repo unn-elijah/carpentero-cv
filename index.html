@@ -10,10 +10,12 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@500;600;700;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
+  <!-- Tailwind browser build keeps this static, no-build-step site deployable on Vercel. -->
+  <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
 </head>
 <body>
-<div class="page">
-  <header class="hero" id="top">
+<div class="page mx-auto w-full max-w-[1160px] px-3 py-5 sm:px-5 lg:px-8">
+  <header class="hero grid grid-cols-1 items-center gap-6 px-5 py-8 sm:px-7 md:grid-cols-[minmax(0,1fr)_225px] md:gap-9 md:px-11 md:py-12 lg:grid-cols-[minmax(0,1fr)_260px] lg:gap-[70px] lg:px-[76px] lg:py-[68px]" id="top">
     <div class="hero-copy">
       <p class="eyebrow">Curriculum Vitae <span>·</span> 2026</p>
       <h1>Eljah Fiona<br><span>P. Carpentero</span></h1>
@@ -29,23 +31,23 @@
         <li><span>⌖ <span>Panabo City, Davao del Norte</span></span></li>
       </ul>
     </div>
-    <div class="hero-portrait">
+    <div class="hero-portrait mx-auto w-[165px] sm:w-[190px] md:w-[210px] lg:w-[260px] max-md:row-start-1">
       <span class="portrait-orbit" aria-hidden="true"></span>
       <img src="assets/CARPENTETRO,%20EF.webp" alt="Portrait of Eljah Fiona P. Carpentero">
       <div class="portrait-note"><span class="status-dot"></span> Open to opportunities</div>
     </div>
   </header>
 
-  <nav class="site-nav" aria-label="Page navigation">
+  <nav class="site-nav flex flex-wrap items-center justify-between gap-3 px-3 py-3 sm:px-5 md:flex-nowrap md:gap-5 md:px-[22px] md:py-0" aria-label="Page navigation">
     <a class="nav-brand" href="#top">EFC<span>.</span></a>
-    <div class="nav-links">
+    <div class="nav-links order-3 flex w-full items-center justify-start gap-4 overflow-x-auto py-2 md:order-none md:w-auto md:justify-center md:gap-5 md:overflow-visible">
       <a href="#profile">Profile</a><a href="#education">Education</a><a href="#skills">Skills</a><a href="#projects">Projects</a><a href="#experience">Experience</a><a href="#contact">Contact</a>
     </div>
     <a class="nav-github" href="https://github.com/unn-elijah" target="_blank" rel="noopener noreferrer">GitHub ↗</a>
   </nav>
 
   <main>
-    <section class="section profile-grid reveal" id="profile">
+    <section class="section profile-grid reveal grid grid-cols-1 gap-[18px] md:grid-cols-[1.1fr_.9fr]" id="profile">
       <article class="card profile-card">
         <p class="section-label">01 / About</p><h2>A little about me</h2>
         <p>I’m interested in frontend and mobile development, user-centered interface design, and system analysis. I like bringing structure and visual clarity to projects, and collaborating with a team to turn requirements into working products.</p>
@@ -60,7 +62,7 @@
 
     <section class="section reveal" id="education">
       <div class="section-heading"><div><p class="section-label">02 / Learning</p><h2>Education</h2></div><span class="heading-note">Academic background</span></div>
-      <article class="card education-card">
+      <article class="card education-card flex flex-col gap-4 p-5 sm:flex-row sm:items-start sm:gap-6 sm:p-7">
         <div class="education-mark" aria-hidden="true">DNSC</div>
         <div class="education-info"><p class="date-label">2022 — Present <span class="current-badge">4th year</span></p><h3>Bachelor of Science in Information Technology</h3><p>Davao Del Norte State College</p><div class="course-tags"><span>Database Management</span><span>Systems Analysis &amp; Design</span><span>Data Structures &amp; Algorithms</span><span>Web Development</span><span>Data Mining</span></div></div>
       </article>
@@ -68,7 +70,7 @@
 
     <section class="section reveal" id="skills">
       <div class="section-heading"><div><p class="section-label">03 / Toolkit</p><h2>Skills &amp; tools</h2></div><span class="heading-note">Built through coursework and projects</span></div>
-      <div class="skills-grid">
+      <div class="skills-grid grid grid-cols-1 gap-3 sm:grid-cols-2 lg:grid-cols-4">
         <article class="card skill-card"><span class="skill-number">01</span><h3>Programming</h3><div class="tag-row"><span>Python</span><span>JavaScript</span><span>SQL</span><span>Dart</span></div></article>
         <article class="card skill-card"><span class="skill-number">02</span><h3>Web &amp; app development</h3><div class="tag-row"><span>HTML</span><span>CSS</span><span>Bootstrap</span><span>Node.js</span></div></article>
         <article class="card skill-card"><span class="skill-number">03</span><h3>Data &amp; networking</h3><div class="tag-row"><span>MySQL</span><span>Firebase</span><span>Network configuration</span><span>Routing &amp; switching</span></div></article>
@@ -78,11 +80,11 @@
 
     <section class="section reveal" id="projects">
       <div class="section-heading"><div><p class="section-label">04 / Selected work</p><h2>Projects</h2></div><span class="heading-note">Academic and technical projects</span></div>
-      <article class="card featured-project">
+      <article class="card featured-project grid grid-cols-1 items-center gap-5 p-4 sm:p-6 lg:grid-cols-[1.05fr_.95fr] lg:gap-[22px] lg:p-[31px]">
         <div class="featured-copy"><span class="project-kicker">Ongoing · Capstone</span><h3>PineVision</h3><p class="project-subtitle">Drone-based pineapple monitoring &amp; fruit estimation</p><p>An agricultural computer vision system that analyzes drone imagery to detect pineapple bearings, classify growth stages, and estimate harvest yield.</p><p class="project-contribution"><strong>My role</strong> System analysis and design, UI/UX, and frontend development.</p><div class="tag-row"><span>Python</span><span>YOLO</span><span>OpenCV</span><span>Flask</span><span>MySQL</span></div></div>
         <div class="featured-visual"><img src="assets/pinevision-capstoneproject.svg" alt="PineVision system overview"></div>
       </article>
-      <div class="projects-grid">
+      <div class="projects-grid grid grid-cols-1 gap-4 lg:grid-cols-3">
         <article class="card project-card"><div class="project-image"><img src="assets/carryhub-projects.svg" alt="CarryHub project preview" loading="lazy"></div><div class="project-content"><p class="project-kicker">Mobile application</p><h3>CarryHub</h3><p>A student-to-student academic commission platform with a points-based system for tracking reliability, competency, and work quality.</p><p class="project-contribution"><strong>My role</strong> Frontend app developer</p><div class="tag-row"><span>Dart</span><span>C++</span></div><a class="text-link" href="https://github.com/unn-elijah/carryhub" target="_blank" rel="noopener noreferrer">View repository <span>↗</span></a></div></article>
         <article class="card project-card"><div class="project-image"><img src="assets/hatodhub-projects.svg" alt="HatodHub project preview" loading="lazy"></div><div class="project-content"><p class="project-kicker">Mobile application</p><h3>HatodHub</h3><p>A community-driven pedicab transport app focused on trusted rides, passenger feedback, incident reporting, and clear fare guidance.</p><p class="project-contribution"><strong>My role</strong> Frontend app developer</p><div class="tag-row"><span>Dart</span><span>C++</span></div><a class="text-link" href="https://github.com/unn-elijah/hatodhub" target="_blank" rel="noopener noreferrer">View repository <span>↗</span></a></div></article>
         <article class="card project-card"><div class="project-image"><img src="assets/tarotcast-projects.svg" alt="TarotCast project preview" loading="lazy"></div><div class="project-content"><p class="project-kicker">Web application</p><h3>TarotCast</h3><p>A daily companion combining personalized tarot guidance, inspirational quotes, and real-time weather in a calm, approachable interface.</p><p class="project-contribution"><strong>My role</strong> Web designer and frontend developer</p><div class="tag-row"><span>HTML</span><span>CSS</span><span>Python</span></div><a class="text-link" href="https://github.com/unn-elijah/tarotcast" target="_blank" rel="noopener noreferrer">View repository <span>↗</span></a></div></article>
@@ -91,13 +93,13 @@
 
     <section class="section reveal" id="research">
       <div class="section-heading"><div><p class="section-label">05 / Academic work</p><h2>Research &amp; proposals</h2></div><span class="heading-note">Selected written work</span></div>
-      <div class="research-grid">
+      <div class="research-grid grid grid-cols-1 gap-3 lg:grid-cols-3">
         <article class="card research-card"><p class="project-kicker">Data mining</p><h3>Pineapple detection &amp; fruit estimation</h3><p>Research on data mining techniques for bearing pineapple detection and yield estimation in PineVision.</p><a class="text-link" href="https://drive.google.com/file/d/1XQUt_zXsc5kfqO1ZvffGZ8ysXx47yDR0/view?usp=sharing" target="_blank" rel="noopener noreferrer">Read paper <span>↗</span></a></article>
         <article class="card research-card"><p class="project-kicker">System proposal</p><h3>CarryHub academic commission platform</h3><p>A proposal for a structured student-to-student academic task platform with a points-based commission model.</p><a class="text-link" href="https://drive.google.com/file/d/1HodqnWc19WSoNuznBDZrVqFiAlEA8vbh/view?usp=sharing" target="_blank" rel="noopener noreferrer">Read proposal <span>↗</span></a></article>
         <article class="card research-card"><p class="project-kicker">IT ethics</p><h3>Intellectual property &amp; AI training</h3><p>A policy proposal examining intellectual property and copyright considerations in AI training at Anthropic.</p><a class="text-link" href="https://drive.google.com/file/d/1ObN-oEaYx9TD8EK8On48Eq85ZEhvFMU6/view?usp=sharing" target="_blank" rel="noopener noreferrer">Read proposal <span>↗</span></a></article>
       </div>
     </section>
-    <section class="section split-section reveal" id="experience">
+    <section class="section split-section reveal grid grid-cols-1 items-start gap-6 lg:grid-cols-[1.3fr_.7fr]" id="experience">
       <div><div class="section-heading"><div><p class="section-label">06 / Practice</p><h2>Experience</h2></div></div><div class="timeline">
         <article class="timeline-item"><span class="timeline-dot"></span><p class="date-label">2025 — Present</p><h3>System Analyst / Designer &amp; Frontend Developer</h3><p class="timeline-org">PineVision · Capstone project</p><p>Lead system analysis and design, shape the user experience, build the frontend, and coordinate architecture for computer vision components.</p></article>
         <article class="timeline-item"><span class="timeline-dot"></span><p class="date-label">Academic projects</p><h3>App, web &amp; brochure designer · Frontend developer</h3><p class="timeline-org">HatodHub &amp; CarryHub</p><p>Designed and developed app interfaces, built Figma prototypes, and created project branding materials including brochures.</p></article>
@@ -106,7 +108,7 @@
       <aside class="card credentials-card"><p class="section-label">07 / Credential</p><h2>Certification</h2><div class="certificate-icon" aria-hidden="true">✦</div><p class="project-kicker">Cisco Networking Academy · December 12, 2025</p><h3>CCNA: Switching, Routing, and Wireless Essentials</h3><a class="text-link" href="https://drive.google.com/file/d/1hu04tCwTc2VCjIPTFYK4lzIsuPt2bhzW/view?usp=sharing" target="_blank" rel="noopener noreferrer">View certificate <span>↗</span></a></aside>
     </section>
 
-    <section class="section contact-section reveal" id="contact"><div class="contact-card"><div><p class="section-label">08 / Say hello</p><h2>Let’s build something useful.</h2><p>Open to internship, OJT, freelance, and early-career opportunities.</p></div><div class="contact-links"><a href="mailto:eljahcarpentero518@gmail.com">Email me <span>↗</span></a><a href="https://github.com/unn-elijah" target="_blank" rel="noopener noreferrer">GitHub <span>↗</span></a><a href="https://www.facebook.com/eljahfiona.carpentero/" target="_blank" rel="noopener noreferrer">Facebook <span>↗</span></a></div></div></section>
+    <section class="section contact-section reveal" id="contact"><div class="contact-card flex flex-col items-start justify-between gap-6 p-6 sm:p-9 lg:flex-row lg:items-center"><div><p class="section-label">08 / Say hello</p><h2>Let’s build something useful.</h2><p>Open to internship, OJT, freelance, and early-career opportunities.</p></div><div class="contact-links flex w-full flex-wrap gap-2 lg:w-auto"><a href="mailto:eljahcarpentero518@gmail.com">Email me <span>↗</span></a><a href="https://github.com/unn-elijah" target="_blank" rel="noopener noreferrer">GitHub <span>↗</span></a><a href="https://www.facebook.com/eljahfiona.carpentero/" target="_blank" rel="noopener noreferrer">Facebook <span>↗</span></a></div></div></section>
   </main>
   <footer><span>© 2026 Eljah Fiona P. Carpentero</span><a href="#top">Back to top ↑</a></footer>
 </div>
