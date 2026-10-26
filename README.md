@@ -1,32 +1,25 @@
-# Personal CV Web Page
+# Eljah Fiona P. Carpentero — CV
 
-```
-Complete Name: Eljah Fiona P. Carpentero
-Year Level: 4th Year
-Set/Section: BSIT 4G
-Subject: IT415 APPLICATION DEVELOPMENT AND EMERGING TECHNOLOGIES
-```
+A responsive personal CV and portfolio website for internship, OJT, freelance, and early-career opportunities.
 
-## About
+## Technologies
 
-This repository contains a simple, responsive personal Curriculum Vitae (CV) web page,
-built as an academic submission. The content is based on the author's resume and includes
-a profile, education, skills, experience/projects, and contact information.
+- HTML5
+- CSS3 (responsive layouts, transitions, reduced-motion support)
+- Vanilla JavaScript (scroll reveal)
 
-## Project Structure
+## Sections
 
-```
-.
-├── index.html         # CV web page markup
-├── style.css          # Page styling
-├── script.js          # Small reveal-on-scroll effect
-├── assets/
-│   └── CARPENTETRO, EF.webp  # Profile photo (WebP, converted from PNG for faster loading)
-└── README.md          # This file
-```
+Profile and career objective, education, technical skills, selected projects, academic research, experience, certification, and contact links.
 
-## Usage
+## Student
 
-Open `index.html` in any modern web browser to view the CV page locally — no build step
-is required. The page uses a single Google Font (Plus Jakarta Sans) as its only external
-dependency; everything else is plain HTML, CSS, and vanilla JavaScript.
+Eljah Fiona P. Carpentero — BSIT 4th Year, Davao Del Norte State College
+
+## Run locally
+
+Open `index.html` in a modern browser. No build step is required.
+
+## Deployment
+
+Deploy this static site from the repository root with Vercel. The public Vercel URL will be added here after deployment is connected and verified.
